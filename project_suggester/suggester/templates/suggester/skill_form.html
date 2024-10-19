@@ -74,7 +74,7 @@
     {% csrf_token %}
 
     <fieldset style="   border: none;">
-        <legend>Select your Tech stack</legend>
+        <legend>Select your Tech Stack</legend>
         <div class="checkbox-group">
             {% for tech_stack in tech_stacks %}
                 <label><input type="checkbox" name="tech_stacks" value="{{ tech_stack.id }}"> {{ tech_stack.name }}</label>
