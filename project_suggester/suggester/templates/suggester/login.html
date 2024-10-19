@@ -1,0 +1,80 @@
+{% extends 'suggester/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<style>
+    /* CSS Styles for the login page */
+    .login-container {
+        max-width: 400px; /* Limit the width of the form */
+        margin: 0 auto; /* Center the container */
+        padding: 30px; /* Add some padding */
+        background-color: #ffffff; /* White background for contrast */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        text-align: center; /* Center the text inside the container */
+    }
+
+    h2 {
+        margin-bottom: 20px; /* Space below the heading */
+        font-size: 24px; /* Font size for the heading */
+        color: #333; /* Dark color for the heading */
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 15px; /* Space between form elements */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px; /* Padding for input fields */
+        border: 1px solid #ccc; /* Light gray border */
+        border-radius: 5px; /* Rounded corners for input fields */
+        font-size: 16px; /* Font size for input fields */
+        width: 100%; /* Full width for input fields */
+        box-sizing: border-box; /* Include padding and border in width */
+    }
+
+    .btn {
+        background-color: #333; /* Dark background for the button */
+        color: white; /* White text */
+        border: none; /* Remove border */
+        padding: 12px; /* Padding for the button */
+        border-radius: 5px; /* Rounded corners for the button */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 16px; /* Font size */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+        width: 100%; /* Full width for the button */
+    }
+
+    .btn:hover {
+        background-color: #555; /* Lighter background on hover */
+    }
+
+    .signup-prompt {
+        margin-top: 15px; /* Space above the signup prompt */
+        color: #666; /* Slightly lighter color for the prompt text */
+    }
+
+    .signup-prompt a {
+        color: #333; /* Dark link color */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .signup-prompt a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+</style>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form method="post" class="login-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <p class="signup-prompt">Don't have an account? <a href="{% url 'signup' %}">Sign up here</a>.</p>
+</div>
+{% endblock %}
