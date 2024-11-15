@@ -1,5 +1,6 @@
 # ProjeXplorer: Personalized Coding Project Suggestion Website
-![image](https://github.com/user-attachments/assets/588dd0eb-0686-4e8a-944d-1442aae44ace)
+![ProjeXplorer_recommendation](https://github.com/user-attachments/assets/60f48ccb-3ef2-42d9-b21d-3d1d3758e5d8)
+
 
 
 **ProjeXplorer** is a personalized project suggestion web application built using Django. The goal of the project is to suggest coding projects based on a user’s proficiency in various technologies and their domain interests.
